@@ -65,8 +65,17 @@ body {
 	gap: 20px 0;
 	padding: 20px;
 }
+.project_wrap{
+	display: flex;
+	flex-direction: column;
+}
 .project{
     display: none;
+	flex-direction: column;
+	transition: 0.3s transform;
+}
+.project:hover{
+	transform: scale(1.03);
 }
 .projects img {
 	max-width: 100%;
