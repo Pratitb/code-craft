@@ -35,6 +35,7 @@ body {
 .filter_container,
 .categories {
 	display: flex;
+	flex-wrap: wrap;
 }
 .categories {
 	width: 100%;
@@ -46,7 +47,7 @@ body {
 	font-size: 16px;
 	/* border: 1px solid var(--theme-black); */
 	border-radius: 4px;
-	padding: 8px 16px;
+	padding: 8px 8px;
 	flex-grow: 1;
 	transition: all 0.3s;
 	text-align: center;
@@ -65,36 +66,39 @@ body {
 	gap: 20px 0;
 	padding: 20px;
 }
-.project_wrap{
+.project_wrap {
 	display: flex;
 	flex-direction: column;
 }
-.project{
-    display: none;
+.project {
+	display: none;
 	flex-direction: column;
 	transition: 0.3s transform;
 }
-.project:hover{
+.project:hover {
 	transform: scale(1.03);
 }
 .projects img {
 	max-width: 100%;
 	border-radius: 5px;
 }
-.show{
-    display: flex;
+.show {
+	display: flex;
 }
-.category_active{
+.category_active {
 	color: #fff;
-    background-color: var(--theme-black);
+	background-color: var(--theme-black);
 }
-.hide_mob{
+.hide_mob {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
 	.categories {
 		width: initial;
+	}
+	.category{
+		padding: 8px 12px;
 	}
 	.projects_container {
 		flex-direction: row;
@@ -105,15 +109,15 @@ body {
 		flex-basis: 48%;
 		flex-grow: 1;
 	}
-	.hide_mob{
+	.hide_mob {
 		display: flex;
 	}
 }
 @media only screen and (min-width: 1280px) {
-	.brand_name{
-        font-size: 30px;
-    }
-    .category{
-        font-size: 20px;
-    }
+	.brand_name {
+		font-size: 30px;
+	}
+	.category {
+		font-size: 20px;
+	}
 }
