@@ -13,6 +13,10 @@ body {
 	font-family: 'Golos Text', sans-serif;
 	color: var(--theme-black);
 }
+a {
+	text-decoration: none;
+	color: inherit;
+}
 /* {
     background-color: #EEEEEE;
 } */
@@ -24,7 +28,7 @@ body {
 }
 /* header ***********************************/
 .header_container {
-	padding: 10px 20px;
+	padding: 20px;
 }
 .brand_name {
 	font-size: 22px;
@@ -62,6 +66,7 @@ body {
 /* projects */
 .projects_container {
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	gap: 20px 0;
 	padding: 20px;
@@ -72,11 +77,44 @@ body {
 }
 .project {
 	display: none;
+	padding: 10px 15px 20px;
 	flex-direction: column;
 	transition: 0.3s transform;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .project:hover {
 	transform: scale(1.03);
+}
+.project_stack {
+	display: flex;
+	gap: 0 10px;
+	margin: 10px 0;
+}
+.stack_name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	width: 50px;
+	height: 24px;
+	font-size: 10px;
+	font-weight: 500;
+	border-radius: 10px;
+	background-color: #eeeeee;
+}
+.divide_line {
+	height: 1px;
+	width: 100%;
+	background-color: #eeeeee;
+}
+.project_name {
+	font-weight: 500;
+	font-size: 14px;
+	margin: 10px 0 0;
+	text-transform: capitalize;
+	color: #616161;
 }
 .projects img {
 	max-width: 100%;
@@ -93,15 +131,10 @@ body {
 	display: none;
 }
 
-@media screen and (min-width: 768px) {
-	.categories {
-		width: initial;
-	}
-	.category{
-		padding: 8px 12px;
-	}
+@media screen and (min-width: 425px) {
 	.projects_container {
 		flex-direction: row;
+		justify-content: center;
 		flex-wrap: wrap;
 		gap: 20px;
 	}
@@ -109,15 +142,50 @@ body {
 		flex-basis: 48%;
 		flex-grow: 1;
 	}
+}
+@media screen and (min-width: 768px) {
+	.categories {
+		width: initial;
+	}
+	.category {
+		padding: 8px 12px;
+	}
 	.hide_mob {
 		display: flex;
 	}
 }
-@media only screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
 	.brand_name {
-		font-size: 30px;
+		font-size: 28px;
 	}
 	.category {
-		font-size: 20px;
+		font-size: 22px;
+	}
+	.project {
+		padding: 20px;
+	}
+	.project_stack {
+		margin: 20px 0;
+	}
+	.stack_name {
+		width: 70px;
+		height: 30px;
+		font-size: 15px;
+	}
+	.project_name {
+		font-size: 18px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.brand_name {
+		font-size: 32px;
+	}
+	.category {
+		font-size: 24px;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.project {
+		flex-basis: 32%;
 	}
 }
