@@ -103,6 +103,11 @@ a {
 	font-weight: 500;
 	border-radius: 10px;
 	background-color: #eeeeee;
+	transition: all 0.3s;
+}
+.stack_name:hover {
+	color: #fff;
+	background-color: rgba(49, 54, 63, 0.9);
 }
 .divide_line {
 	height: 1px;
