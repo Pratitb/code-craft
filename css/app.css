@@ -143,10 +143,6 @@ a {
 		flex-wrap: wrap;
 		gap: 20px;
 	}
-	.project {
-		flex-basis: 48%;
-		flex-grow: 1;
-	}
 }
 @media screen and (min-width: 768px) {
 	.categories {
@@ -157,6 +153,9 @@ a {
 	}
 	.hide_mob {
 		display: flex;
+	}
+	.project {
+		flex-basis: 48%;
 	}
 }
 @media screen and (min-width: 1024px) {
@@ -187,6 +186,9 @@ a {
 	}
 	.category {
 		font-size: 24px;
+	}
+	.project {
+		flex-basis: 33%;
 	}
 }
 @media screen and (min-width: 1440px) {
